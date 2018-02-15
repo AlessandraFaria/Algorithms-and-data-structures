@@ -14,7 +14,7 @@ namespace ConsoleApp3
             string[] leitura = new string[3];
             string linha;
             int codigo;
-            
+
             Produto[] Produtos = new Produto[20];
             int indice = 0;
 
@@ -25,7 +25,7 @@ namespace ConsoleApp3
             int j = 0;
             while (linha != null)
             {
-                
+
                 leitura = linha.Split('-');
                 Produtos[j] = new Produto();
                 Produtos[j].nome = Convert.ToString(leitura[1]);
@@ -38,35 +38,40 @@ namespace ConsoleApp3
 
             Console.WriteLine("Digite o código de barras do produto");
             codigo = Convert.ToInt32(Console.ReadLine());
-           Produto resultado= BuscaProduto(Produtos,codigo, indice);
-            Console.WriteLine("nome do Produto "+resultado.nome+" preço"+resultado.precoUnitario);
+            Produto resultado = BuscaProduto(Produtos, codigo, indice);
+            Console.WriteLine("nome do Produto " + resultado.nome + " preço" + resultado.precoUnitario);
             Console.ReadKey();
 
         }
 
-        public static Produto BuscaProduto(Produto[] produto, int codigo,int indice) {
+        public static Produto BuscaProduto(Produto[] produto, int codigo, int indice)
+        {
             if (produto[indice].codigoDeBarras == codigo)
             {
                 return produto[indice];
             }
-            else {
-                return BuscaProduto(produto, codigo,(indice+1));
+            else
+            {
+                Console.WriteLine(indice);
+                return BuscaProduto(produto, codigo, (indice + 1));
             }
-            
+
 
         }
 
     }
 
-    class Produto {
+    class Produto
+    {
 
         public int codigoDeBarras;
         public double precoUnitario;
         public string nome;
 
         public Produto() { }
-        public Produto( int codigoDeBarras, double precoUnitario, string nome) {
-            this.nome = nome ;
+        public Produto(int codigoDeBarras, double precoUnitario, string nome)
+        {
+            this.nome = nome;
             this.precoUnitario = precoUnitario;
             this.codigoDeBarras = codigoDeBarras;
         }
