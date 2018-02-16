@@ -31,20 +31,29 @@ namespace ex2
         static public int Divisao(int n1, int n2,  int vezes)
         {
 
-            //if ((n1 == 0))
-            //{
-            //    return 0;
-            //}
-             if (n1<n2)
+            if ((n1 == 0))
+            {
+                return 0;
+            }
+            if (n1<n2)
             {
                 return vezes;//=vezes-1;
             }
             else
             {
-                n1 = n1-(n2 * vezes);
-                return Divisao(n1, n2, (vezes + 1));
+                n1 = n1 - n2;//(n2 * vezes);
+                if ((n1 < 0)||(n1==0)||(n1<n2))
+                {
+                    return vezes;
+                }
+                else
+                {
+                    return Divisao(n1, n2, (vezes + 1));
+                }
             }
         }
     }
 }
+
+
 
