@@ -10,44 +10,41 @@ namespace ex2
     {
         static void Main(string[] args)
         {
-            int nu1 = 0, nu2 = 0, resultado = 0, vezes = 1;
+            int nu1 = 0, nu2 = 0, vezes = 1;
 
-            Console.WriteLine("Digite o Primeiro Número ");
+            Console.WriteLine("Digite o Primeiro NÃºmero ");
             nu1 = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("Digite o Segundo Número ");
+            Console.WriteLine("Digite o Segundo NÃºmero ");
             nu2 = Convert.ToInt32(Console.ReadLine());
             if (nu2 == 0)
             {
-                Console.WriteLine("Não é possivel realizar divisão por 0 ");
+                Console.WriteLine("NÃ£o Ã© possivel realizar divisÃ£o por 0 ");
             }
             else
             {
-                Console.WriteLine("Resultado  " + nu1 + " / " + nu2 + " = " + Divisao(nu1, nu2, resultado, vezes));
+                Console.WriteLine("Resultado  " + nu1 + " / " + nu2 + " = " + Divisao(nu1, nu2, vezes));
             }
 
             Console.ReadKey();
         }
-        static public int Divisao(int n1, int n2, int resultado, int vezes)
+        static public int Divisao(int n1, int n2,  int vezes)
         {
 
-            if ((n1 == 0))
+            //if ((n1 == 0))
+            //{
+            //    return 0;
+            //}
+             if (n1<n2)
             {
-                return 0;
-            }
-            else if (n1 == n2)
-            {
-                return 1;
-            }
-            if (resultado <= (n1/n2))
-            {
-                return resultado;
+                return vezes;//=vezes-1;
             }
             else
             {
-                resultado = n2 * vezes;
-                return Divisao(n1, n2, (n1 - resultado), (vezes + 1));
+                n1 = n1-(n2 * vezes);
+                return Divisao(n1, n2, (vezes + 1));
             }
         }
     }
 }
+
