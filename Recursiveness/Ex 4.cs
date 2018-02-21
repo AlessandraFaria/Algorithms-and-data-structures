@@ -13,58 +13,48 @@ namespace ConsoleApp2
             int n = 0;
             int controle = 0;
 
-            Console.WriteLine("Digite o número de elementos do vetor");
+            Console.WriteLine("Digite o nÃºmero de elementos do vetor");
             n = Convert.ToInt32(Console.ReadLine());
 
             int[] valores = new int[n];
             for (int c = 0; c < n; c++)
             {
-                Console.WriteLine("Digite um número para ser armazenado no Vetor ");
+                Console.WriteLine("Digite um nÃºmero para ser armazenado no Vetor ");
                 valores[c] = Convert.ToInt32(Console.ReadLine());
             }
 
-            Console.WriteLine("Fim da escrita normal dos valores " + EscritaNormal(valores, n, controle));
-            Console.WriteLine("Fim da escrita invertida dos valores " + EscritaInvertida(valores, n, ((controle = n) - 1)));
-            Console.WriteLine("Fim da escrita normal dos valores " + Soma(valores, (n - 1), (controle = 0)));
+            Console.WriteLine("Fim da escrita normal dos valores " + EscritaNormal(valores, n));
+            Console.WriteLine("Fim da escrita invertida dos valores " + EscritaInvertida(valores, n));
+            Console.WriteLine("Fim da escrita normal dos valores " + Soma(valores, n));
 
             Console.ReadKey();
         }
-        public static int EscritaNormal(int[] valores, int n, int controle)
+        public static void EscritaNormal(int[] valores, int n)
         {
-            if (controle == n)
+            if (n>=0)
             {
-                return 0;
+                return EscritaNormal(valores, (n-1));               
+                Console.WriteLine(valores[n]);
             }
-            else
-            {
-                Console.WriteLine(valores[controle]);
-                return EscritaNormal(valores, n, (controle + 1));
-            }
+           
         }
-        public static int EscritaInvertida(int[] valores, int n, int controle)
+        public static void EscritaInvertida(int[] valores, int n)
         {
 
-            if (controle < 0)
+            if (n>=  0)
             {
-                return 0;
+                Console.WriteLine(valores[n]);
+                return EscritaInvertida(valores, (n-1));
             }
-            else
-            {
-                Console.WriteLine(valores[controle]);
-                return EscritaInvertida(valores, n, (controle - 1));
-            }
+           
         }
-        public static int Soma(int[] valores, int n, int controle)
+        public static int Soma(int[] valores, int n)
         {
-            int soma = 0;
-            if (controle == n)
+            if(n>=0)
             {
-                return 0;
+                return valores[n] + Soma(valores, (n-1));
             }
-            else
-            {
-                return valores[n] + Soma(valores, n, (controle + 1));
-            }
+            else return 0;
         }
 
 
