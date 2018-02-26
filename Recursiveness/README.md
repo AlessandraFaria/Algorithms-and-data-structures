@@ -53,3 +53,14 @@ Lembre-se que, para a pesquisa binária, o vetor deve estar ordenado. Para isso,
 procedimento para sempre inserir produtos no vetor em ordem ascendente de código de barras,
 para que esse vetor de produtos sempre fique ordenado.
 Compare e discuta os resultados obtidos na pesquisa sequencial e na pesquisa binária.
+
+### Ex 7 :
+Um programa em C# que calcule uma aproximação do coseno de 1 (um) radiano através da
+série infinita abaixo:
+
+C = 1 - 1/2! + 1/4! - 1/6! + 1/10! ....
+
+Esse programa deve receber como entrada o número de termos, n, da série infinita acima, que
+devem ser considerados para o cálculo de C. O cálculo do valor de C, obtido pela série infinita
+acima, deve ser realizado considerando apenas seus n primeiros termos e utilizando-se uma
+função recursiva. Ao final, o programa deve imprimir o resultado encontrado para C.
