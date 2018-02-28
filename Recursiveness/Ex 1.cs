@@ -4,36 +4,33 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp1
+namespace ConsoleApp5
 {
-class Program
-{
-static void Main(string[] args) //Alessandra Faria Abreu
-{
-    int nu1 = 0 , nu2 = 0 ;
+    class Program
+    {//alessandra faria abreu
+        static void Main(string[] args)
+        {
+            int a = 0, b= 0;
+            Console.WriteLine("Digite o primeiro número");
+            a = int.Parse(Console.ReadLine());
+            Console.WriteLine("Digite o segundo número");
+            b = int.Parse(Console.ReadLine());
 
-    Console.WriteLine("Digite o Primeiro Número ");
-    nu1 = Convert.ToInt32(Console.ReadLine());
-
-    Console.WriteLine("Digite o Segundo Número ");
-    nu2 = Convert.ToInt32(Console.ReadLine());
-
-    Console.WriteLine("Resultado  "+nu1+" X "+nu2+" = "+ Multiplicacao(nu1,nu2);
+            Console.WriteLine("Resultado  " + a + " X " + b + " = " + Multiplica(a, b));
 
             Console.ReadKey();
 
-    }
-static public int Multiplicacao(int n1 , int n2) {
-            int numero = 0;
-            if ((n1 == 0) || (n2 == 0))
+
+        }
+
+        public static int Multiplica(int n1 , int n2) {
+            if ((n2 == 0)||(n1==0))
             {
                 return 0;
             }
-            
-            else {  
-                return n2+ Multiplicacao(n1,(n2-1));
+            else {
+                return n1 + Multiplica(n1,(n2-1));
             }
-
-}
-}
+        }
+    }
 }
