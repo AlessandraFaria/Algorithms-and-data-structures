@@ -1,15 +1,17 @@
 
-Seja T uma árvore binária de busca, na qual cada nodo é constituído pelas informações
-NOME, SEXO ('M' ou 'F'), IDADE e PESO. Sabendo que a árvore foi construída com a
-chave NOME e que já existe um ponteiro chamado RAIZ que aponta para o nodo raiz da
-árvore, construir algoritmos para :
-- Informar a quantidade de homens e a média de idade das mulheres;
-- Pesquisar a idade e o peso de uma determinada pessoa. 
+- [Tradução PT-BR](https://github.com/AlessandraFaria/Algorithms-and-data-structures/edit/master/Binary%20Tree/Tradu%C3%A7%C3%A3o.md)
 
-## Percorrer uma árvore binária em pré-ordem:
-O percurso em pré-ordem segue os nós até chegar os mais “profundos”, em “ramos”
-de subárvores da esquerda para 
+Let T be a binary search tree, in which each node consists of the information
+NAME, SEX ('M' or 'F'), AGE and WEIGHT. Knowing that the tree was built with the
+NAME and that there already exists a pointer named ROOT that points to the root node of the
+tree, build algorithms for:
+- Inform the number of men and the average age of the women;
+- Search the age and weight of a particular person.
 
-- 1 Vistar a raiz.
-- 2 Percorrer a sua subárvore esquerda em pré-ordem.
-- 3 Percorrer a sua subárvore direita em pré-ordem.
+## Traversing a binary tree in preorder:
+The pre-order route follows the knots until reaching the "deepest", in "branches"
+from left subtrees to
+
+- 1 Watch the root.
+- 2 Traverse your left subtree in preorder.
+- 3 Scroll through your right subtree in preorder.
