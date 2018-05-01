@@ -56,7 +56,7 @@ procedure to always insert products into the vector in ascending order of bar co
 so that this vector of products is always ordered.
 Compare and discuss the results obtained in sequential research and binary search.
 
-# 7 # Ex 7:
+ ### Ex 7:
 A C # program that calculates a cosine approximation of 1 (a) radian through the
 infinite series below:
 
