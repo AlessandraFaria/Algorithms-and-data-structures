@@ -1,66 +1,68 @@
-### Ex 1 :
-Um programa em C# que leia dois valores inteiros e imprima o resultado da multiplicação
-de um pelo outro. A multiplicação deve ser feita por meio de somas sucessivas recursivas. Por
-exemplo: 2 x 3 = (2+2+2) = 6.
+- [Tradução PT-BR](https://github.com/AlessandraFaria/Algorithms-and-data-structures/blob/master/Recursiveness/Tradu%C3%A7%C3%A3o.md)
 
-### Ex 2 :
-Um programa em C# que leia dois valores inteiros; calcule, através de uma função
-recursiva, a divisão inteira entre eles; e imprima o resultado. A divisão deve ser feita por meio de
-subtrações sucessivas recursivas. A divisão inteira despreza a parte decimal do resultado, por
-exemplo: 5 / 2 = 2 e 15 / 4 = 3.
+### Ex 1:
+A C # program that reads two integer values ​​and prints the result of the multiplication
+from each other. The multiplication must be done by means of successive recursive sums. Per
+example: 2 x 3 = (2 + 2 + 2) = 6.
 
-### Ex 3 :
-Uma string S e um caractere C, escreva um algoritmo recursivo que responda verdadeiro ou
-falso para a questão: o caractere C existe na string S?
-Dica: para observar os caracteres de uma string, podemos considerá-la como um vetor. Por
-exemplo, se S=”PUC Minas”, S[0] é P, S[1] é U, S[2] é C e assim por diante.
+### Ex 2:
+A C # program that reads two integer values; calculate, by means of a
+recursive, the entire division between them; and print the result. The division must be done by means of
+recursive successive subtractions. The whole division disregards the decimal part of the result, for
+example: 5/2 = 2 and 15/4 = 3.
 
-### Ex 4 :
-Uma função recursiva em C# para solucionar cada um dos problemas descritos
-abaixo. Suas funções devem receber como parâmetros um vetor A de inteiros e a quantidade n de
-elementos armazenados atualmente no vetor:
-a) imprimir os elementos do vetor A na ordem em que se encontram armazenados, isto é:
-A[0], A[1], ... , A[n];
-b) imprimir os elementos do vetor A em ordem contrária àquela em que se encontram
-armazenados, isto é: A[n], A[n-1], ..., A[1], A[0];
-c) calcular o somatório do valor de todos os elementos armazenados no vetor A.
+### Ex 3:
+An S string and a C character write a recursive algorithm that responds true or
+false to the question: does the character C exist in the string S?
+Tip: To observe the characters of a string, we can consider it as a vector. Per
+for example, if S = "PUC Mines", S [0] is P, S [1] is U, S [2] is C and so on.
 
-### Ex 5 :
-Considere um supermercado e a lista de produtos por ele comercializados. Um cliente desse
-supermercado pode, através de terminais eletrônicos espalhados no estabelecimento, consultar o
-preço unitário de um produto informando, para isso, o código de barras desse produto.
-Considere que, sobre cada produto, são armazenadas as seguintes informações: código de barras,
-nome e preço unitário.
-Implemente, em C#, uma classe Produto com os atributos codigoBarras, nome e
-precoUnitario. Esses atributos devem ser dos seguintes tipos, respectivamente: int, String e
-double.
-Faça um programa, em C#, que leia, de um arquivo texto de entrada, a lista de produtos
-comercializados pelo supermercado e armazene-os em um vetor. Assuma que esse arquivo de
-entrada contém, em cada linha, os seguintes dados: o código de barras do produto; o nome do
-produto; e o preço unitário desse produto. Esses dados estão separados, em cada linha, pelo
-caracter ‘-’. Posteriormente, esse programa deve permitir que o usuário informe o código de
-barras do produto pesquisado e retornar o nome e preço unitário desse produto, simulando assim
-as consultas que os clientes do supermercado realizam nos terminais eletrônicos espalhados pelo
-estabelecimento. Implemente a busca do produto desejado no vetor de produtos através de
-pesquisa sequencial recursiva. Faça com que seu programa imprima a quantidade total de
-operações de comparação necessárias para recuperar o produto desejado.
+### Ex 4:
+A recursive function in C # to solve each of the problems described
+below. Its functions should be given as parameters an integer vector A and the quantity n of
+elements currently stored in the vector:
+a) to print the elements of vector A in the order in which they are stored, ie:
+A [0], A [1], ..., A [n];
+b) print the elements of vector A in an order opposite to the one in which they are
+stored, that is: A [n], A [n-1], ..., A [1], A [0];
+c) calculate the sum of the value of all elements stored in vector A.
 
-### Ex 6 :
-Implemente o mesmo procedimento de busca do exercício anterior utilizando, nesse caso,
-pesquisa binária recursiva. Indique ao final a quantidade total de operações de comparação
-necessárias para recuperar o produto desejado.
-Lembre-se que, para a pesquisa binária, o vetor deve estar ordenado. Para isso, faça um
-procedimento para sempre inserir produtos no vetor em ordem ascendente de código de barras,
-para que esse vetor de produtos sempre fique ordenado.
-Compare e discuta os resultados obtidos na pesquisa sequencial e na pesquisa binária.
+### Ex 5:
+Consider a supermarket and the list of products it commercializes. A client of this
+The supermarket can, through electronic terminals scattered throughout the establishment, consult the
+unit price of a product by informing the bar code of that product.
+Consider that, on each product, the following information is stored: bar code,
+name and unit price.
+Implement, in C #, a Product class with the attributes
+Unit price. These attributes must be of the following types, respectively: int, String, and
+double
+Make a program, in C #, that reads, from an input text file, the list of products
+marketed by the supermarket and store them in a vector. Assume that this
+entry contains the following data on each line: the bar code of the product; the name of
+product; and the unit price of that product. These data are separated in each row by the
+character '-'. Subsequently, this program should allow the user to enter the
+of the product searched and return the name and unit price of that product, thereby simulating
+the queries that the supermarket's customers make in the electronic terminals scattered throughout the
+establishment. Implement the desired product search in the product vector through
+recursive sequential search. Have your program print the total amount of
+comparative steps necessary to recover the desired product.
 
-### Ex 7 :
-Um programa em C# que calcule uma aproximação do coseno de 1 (um) radiano através da
-série infinita abaixo:
+### Ex 6:
+Implement the same search procedure for the previous exercise using, in this case,
+recursive binary search. Indicate at the end the total number of comparison operations
+necessary to recover the desired product.
+Remember that for binary search, the vector must be ordered. To do this, make a
+procedure to always insert products into the vector in ascending order of bar code,
+so that this vector of products is always ordered.
+Compare and discuss the results obtained in sequential research and binary search.
+
+# 7 # Ex 7:
+A C # program that calculates a cosine approximation of 1 (a) radian through the
+infinite series below:
 
 C = 1 - 1/2! + 1/4! - 1/6! + 1/10! ....
 
-Esse programa deve receber como entrada o número de termos, n, da série infinita acima, que
-devem ser considerados para o cálculo de C. O cálculo do valor de C, obtido pela série infinita
-acima, deve ser realizado considerando apenas seus n primeiros termos e utilizando-se uma
-função recursiva. Ao final, o programa deve imprimir o resultado encontrado para C.
+This program should receive as input the number of terms, n, of the infinite series above, which
+must be considered for the calculation of C. The calculation of the value of C, obtained by the infinite series
+above, should be performed considering only its first n terms and using a
+recursive function. At the end, the program should print the result found for C.
