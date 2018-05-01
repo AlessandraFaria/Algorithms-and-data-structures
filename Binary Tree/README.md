@@ -5,3 +5,11 @@
 #### árvore, construir algoritmos para :
 - Informar a quantidade de homens e a média de idade das mulheres;
 - Pesquisar a idade e o peso de uma determinada pessoa. 
+
+## Percorrer uma árvore binária em pré-ordem:
+O percurso em pré-ordem segue os nós até chegar os mais “profundos”, em “ramos”
+de subárvores da esquerda para 
+
+- 1 Vistar a raiz.
+- 2 Percorrer a sua subárvore esquerda em pré-ordem.
+- 3 Percorrer a sua subárvore direita em pré-ordem.
